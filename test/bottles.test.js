@@ -57,10 +57,11 @@ describe('Bottles', () => {
       '98 bottles of milk.\n' +
       'Take one down and pass it around, ' +
       '97 bottles of milk on the wall.\n';
-    expect(new Bottles().verses(99, 98)).toBe(expected);
+    const actual = new Bottles().verses(99, 98);
+    expect(actual).toBe(expected);
   });
 
-  test.skip('a few verses', () => {
+  test('a few verses', () => {
     const expected =
       '2 bottles of milk on the wall, ' +
       '2 bottles of milk.\n' +
@@ -79,7 +80,7 @@ describe('Bottles', () => {
     expect(new Bottles().verses(2, 0)).toBe(expected);
   });
 
-  test.skip('the whole song', () => {
+  test('the whole song', () => {
     const expected =
 `99 bottles of milk on the wall, 99 bottles of milk.
 Take one down and pass it around, 98 bottles of milk on the wall.
